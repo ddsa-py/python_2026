@@ -6,7 +6,6 @@ for fila in matrix:
     print(fila)
 print()
 print("Columnas or elementos")
-
 for fila in matrix:
     for columna in fila:
         print(columna)
