@@ -20,3 +20,5 @@ balance_auditoria = (total_mermas * len(mermas_producción)) - 400
 
 print(f"Total Kilos Desincorporados: {total_mermas} kg")
 print(f"Código Balance Final:        {balance_auditoria}")
+
+
