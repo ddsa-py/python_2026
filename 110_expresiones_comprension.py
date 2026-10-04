@@ -11,8 +11,8 @@ lista_pares = []
 for i in range(10):
 
     if i % 2 == 0:
-        x = i ** 2
-        lista_pares.append(x)
+        #x = i ** 2
+        lista_pares.append(i ** 2)
     else:
         lista_pares.append(i)
 
