@@ -14,3 +14,8 @@ reporte_final = ["ALERTA" if carga < 50 else 999 for pos, carga in matriz_base]
 print(reporte_final)
 codigo_planta = (len(reporte_final) * reporte_final.count("ALERTA")) + 800
 print(codigo_planta)
+
+frutas = ["manzana", "pera", "banana", "kiwi", "naranja"]
+print("Frutas:", frutas)
+for i, x in enumerate(frutas, start=101):
+    print(f"Fruta {i}: {x}")

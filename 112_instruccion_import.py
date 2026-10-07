@@ -1,0 +1,26 @@
+import math
+print(f"La raiz cuadrada de 25 es {math.sqrt(25)}")
+print(f"El valor de π es {math.pi}")
+print(f"El seno de 30 grados es {math.sin(math.radians(30))}")
+print(f"El logaritmo en base 10 de 100 es {math.log10(100)}")
+print("***************************************")
+print("Importar con alias")
+import math as m
+m.sqrt(15)
+print(f"La raiz cuadrada de 15 es {m.sqrt(15)}")
+print(f"La raiz cuadrada de 25 es {m.sqrt(25)}")
+print(f"La raiz cuadrada de 36 es {m.sqrt(36)}")
+print(f"El valor de π es {m.pi}")
+print(f"El seno de 30 grados es {m.sin(m.radians(30))}")
+print(f"El logaritmo en base 10 de 100 es {m.log10(100)}")
+print("***************************************")
+print("Importar funciones específicas") 
+from math import sqrt, sin, pi
+sqrt(4)
+print(f"La raiz cuadrad de 4 es: {sqrt(4)}")
+print("***************************************")
+print("Lo que no se debe hacer")
+from math import *
+print(sin(60))
+print(sqrt(15))
+print(pi)
