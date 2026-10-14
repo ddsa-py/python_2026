@@ -1,6 +1,7 @@
 limite_seguro = 5000
 litros_validados = 0
 alertas_letra = 0
+intentos_restantes = 0
 mensaje = "intentos "if alertas_letra <= 4 else "intento"
 while True:
     volumen_crudo = input("Ingrese un valor numerico: ")
@@ -9,7 +10,9 @@ while True:
         break
     except ValueError as ve:
         alertas_letra += 1
-        mensaje = "intentos " if alertas_letra < 4 else "intento"
+        intentos_restantes = 5 - alertas_letra
+        mensaje = "intento" if intentos_restantes == 1  or intentos_restantes == 0 else "intentos"
+       
         print(f"Error compañero, te quedan {5 - alertas_letra} {mensaje}")
     if alertas_letra >= 5:
         print("Fin del juego")
