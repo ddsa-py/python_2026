@@ -1,9 +1,11 @@
 print("Numeros Romanos".center(40, "*"))
 entrada_usuario = ""
-num_romanos = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
-num_romanos_suma = 0
+resultado_romano = ""
+num_romanos = {1000: "M", 900: "CM", 500: "D", 400: "CD", 100: "C", 90: "XC", 50: "L", 40: "XL", 10: "X", 9: "IX", 5: "V", 4: "IV", 1: "I"}
+
 while True:
-    entrada_usuario = input("Ingresa un numero entero para convertirlo en romano: ")
+    resultado_romano = ""
+    entrada_usuario = input("Ingresa un numero entero para convertirlo en romano: ").strip()
     try:
         entrada_usuario = int(entrada_usuario)
         if entrada_usuario <= 0 or entrada_usuario > 3999:
@@ -11,7 +13,11 @@ while True:
             continue
     except ValueError:
         print("Error, debe ingresar numeros enteros positivos")
-    for romano, numero in num_romanos.items():
-        if entrada_usuario == 1:
-            print(romano)
-            
+        continue
+
+    for numero, letra in num_romanos.items():
+        while entrada_usuario >= numero:
+            entrada_usuario -= numero
+            resultado_romano += letra
+    print(f"El numero {entrada_usuario} en numero romano es : {resultado_romano}")
+    
