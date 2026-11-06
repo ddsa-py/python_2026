@@ -21,7 +21,7 @@ while contador_global <= 5:
     if temperatura_usuario == punto_fusion:
         print("Lo lograste a la perfeccion")
         break
-    if contador_global >= 5 or int(num) == str:
+    if contador_global >= 5 or type(num) == str:
         print("No lo lograste")
         break
     tiros_reserva = 5 - contador_global
